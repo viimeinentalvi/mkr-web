@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дизайн та Архітектура | Modern Space</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover {
+            color: #e74c3c;
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #e74c3c;
+            margin: 10px auto;
+        }
+
+        .styles-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .style-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .style-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .style-card h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .caption {
+            transform: translateY(0);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #ecf0f1;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Mariia&Design</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#styles">Стилі</a></li>
+                <li><a href="#gallery">Проєкти</a></li>
+                <li><a href="#contact">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Мистецтво створювати простір</h1>
+        <p>Архітектура — це застигла музика, а дизайн — її ритм.</p>
+        <a href="#gallery" class="btn">Переглянути роботи</a>
+    </section>
+
+    <section id="styles" class="container">
+        <h2 class="section-title">Популярні напрямки</h2>
+        <div class="styles-list">
+            <article class="style-card">
+                <h3>Мінімалізм</h3>
+                <ul>
+                    <li>♡ Багато вільного простору</li>
+                    <li>♡ Світла кольорова гама</li>
+                    <li>♡ Функціональність меблів</li>
+                </ul>
+            </article>
+
+            <article class="style-card">
+                <h3>Лофт</h3>
+                <ul>
+                    <li>♡ Відкриті комунікації (труби, цегла)</li>
+                    <li>♡ Високі стелі</li>
+                    <li>♡ Індустріальні елементи</li>
+                </ul>
+            </article>
+
+            <article class="style-card">
+                <h3>Хай-тек</h3>
+                <ul>
+                    <li>♡ Використання скла та металу</li>
+                    <li>♡ Сучасна техніка</li>
+                    <li>♡ Прямі лінії та геометрія</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section id="gallery" class="container">
+        <h2 class="section-title">Галерея проєктів</h2>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?q=80&w=881&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Сучасний будинок">
+                <figcaption class="caption">Приватна резиденція</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Архітектура модерн">
+                <figcaption class="caption">Офісний центр</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Дизайн інтер'єру">
+                <figcaption class="caption">Інтер'єр вітальні</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ландшафтний дизайн">
+                <figcaption class="caption">Еко-дизайн</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2025 Архітектурне бюро. Всі права захищені.</p>
+        <p>Зв'яжіться з нами: <a href="mariiadesign@gmail.com">mariiadesign@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>
